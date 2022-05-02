@@ -66,6 +66,7 @@ describe("getCostForCrop", () => {
       name: "corn",
       yield: 3,
       cost: 1,
+      price: 2,
     };
     const crops = { crop: corn, numCrops: 5 };
 
@@ -78,6 +79,8 @@ describe("getRevenueForCrop", () => {
     const corn = {
       name: "corn",
       yield: 3,
+      cost: 1,
+      price: 2,
     };
     const crops = { crop: corn, numCrops: 5 };
     expect(getRevenueForCrop({ crops })).toBe(30);
@@ -89,6 +92,8 @@ describe("getProfitForCrop", () => {
     const corn = {
       name: "corn",
       yield: 3,
+      cost: 1,
+      price: 2,
     };
     const crops = { crop: corn, numCrops: 5 };
     expect(getProfitForCrop({ crops })).toBe(25);
@@ -100,10 +105,14 @@ describe("getTotalProfit", () => {
     const corn = {
       name: "corn",
       yield: 3,
+      cost: 1,
+      price: 2,
     };
     const pumpkin = {
       name: "pumpkin",
       yield: 4,
+      cost: 1,
+      price: 2,
     };
     const crops = [
       { crop: corn, numCrops: 5 },
