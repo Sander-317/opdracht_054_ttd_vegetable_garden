@@ -1,10 +1,10 @@
 function getYieldForPlant(plant) {
-  //   console.log(plant, "get yield for plant");
+  // console.log(plant, "get yield for plant");
   return plant.yield;
 }
 
 function getYieldForCrop(plant) {
-  //   console.log(plant, "get yield for crop");
+  console.log(plant.crop, "get yield for crop");
   return getYieldForPlant(plant.crop) * plant.numCrops;
 }
 
@@ -30,7 +30,7 @@ function getCostForCrop(plant) {
 }
 
 function getRevenueForCrop(crops) {
-  //   console.log(crops, "get revenue for crop");
+  console.log(crops.crops, "get revenue for crop");
   //   console.log(crops.crops.crop.price, "price");
   //   console.log(crops, "test");
   //   const salePrice = 2;
@@ -39,6 +39,7 @@ function getRevenueForCrop(crops) {
 }
 
 function getProfitForCrop(crop) {
+  console.log(crop, "getProfitForCrop");
   return getRevenueForCrop(crop) - getCostForCrop(crop);
 }
 
